@@ -15,10 +15,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Landis.Core" Version="2.0.0" />
-    <PackageReference Include="Landis.Extensions.Dataset" Version="2.0.0.1" />
-    <PackageReference Include="Landis.SpatialModeling" Version="2.0.0" />
-    <PackageReference Include="Landis.Utilities" Version="2.0.0" />
     <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
@@ -35,7 +31,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="bin\extensions\" />
     <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Landis.Core">
+      <HintPath>..\..\..\..\..\..\Program Files\LANDIS-II-v7\v7\Landis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Extensions.Dataset">
+      <HintPath>..\..\..\..\..\..\Program Files\LANDIS-II-v7\v7\Landis.Extensions.Dataset.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.SpatialModeling">
+      <HintPath>..\..\..\..\..\..\Program Files\LANDIS-II-v7\v7\Landis.SpatialModeling.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Utilities">
+      <HintPath>..\..\..\..\..\..\Program Files\LANDIS-II-v7\v7\Landis.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

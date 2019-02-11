@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Extension_Admin": {
+      "commandName": "Project",
+      "commandLineArgs": "add \"SCRAPPLE 2.0.txt\"",
+      "workingDirectory": "C:\\Program Files\\LANDIS-II-v7\\plug-ins-installer-files"
+    }
+  }
+}

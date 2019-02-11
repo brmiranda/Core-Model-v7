@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Landis.Console</RootNamespace>
+    <AssemblyName>Landis.Console</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyVersion>7.0.0.1</AssemblyVersion>
+    <ApplicationIcon />
+    <Win32Resource />
+    <Platforms>AnyCPU;x64</Platforms>
+    <!-- Remove netcoreapp2.0 folder-->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Version>7.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\build\Release</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\extensions\extensions.xml" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <None Update="Landis.Console.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="extensions.xml">
+      <OutputDirectory>extensions</OutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+   <ItemGroup>
+     <Folder Include="Properties\" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <PackageReference Include="Landis.Core" Version="2.0.0" />
+     <PackageReference Include="Landis.Core.Implementation" Version="2.0.0" />
+     <PackageReference Include="Landis.Extensions.Dataset" Version="2.0.0.1" />
+     <PackageReference Include="Landis.Landscapes" Version="2.0.0" />
+     <PackageReference Include="Landis.RasterIO" Version="2.0.0" />
+     <PackageReference Include="Landis.RasterIO.Gdal" Version="2.0.0" />
+     <PackageReference Include="Landis.SpatialModeling" Version="2.0.0" />
+     <PackageReference Include="Landis.Utilities" Version="2.0.0" />
+     <PackageReference Include="log4net" Version="2.0.8" />
+     <PackageReference Include="Troschuetz.Random" Version="4.3.0" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\..\Tool-Extension-Admin\src\Extension_Admin.csproj" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <Reference Include="System.Configuration.ConfigurationManager">
+       <HintPath>..\..\..\..\..\..\Program Files\LANDIS-II-v7\v7\System.Configuration.ConfigurationManager.dll</HintPath>
+     </Reference>
+   </ItemGroup>
+
+</Project>
